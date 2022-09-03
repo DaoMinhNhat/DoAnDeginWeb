@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./fonts/themify-icons/themify-icons.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .main {
+        width: 100%;
+        height: 15000px;
+    }
+
+    html {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .logo img {
+        width: 71px;
+    }
+
+    #nav li {
+        list-style: none;
+    }
+
+    .pic {
+        width: 71px;
+    }
+
+    #menu {
+        height: 72px;
+        background-color: white;
+        display: flex;
+
+    }
+
+    #nav li {
+        display: inline-block;
+        position: relative;
+    }
+
+    #nav .subnav {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        top: 100%;
+        left: 0;
+    }
+
+    #nav .subnav1 {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        top: 100%;
+        left: 0;
+    }
+
+    #nav .subnav a {
+        color: #000;
+        font-size: 23px;
+    }
+
+    #nav .subnav1 a {
+        color: #000;
+        font-size: 23px;
+    }
+
+    .subnav li {
+        padding-bottom: 15px;
+    }
+
+    .subnav1 li {
+        padding-bottom: 15px;
+    }
+
+    #menu {
+        display: flex;
+        align-items: center;
+    }
+
+    #nav>li>a {
+        color: black;
+        /* tí sửa black*/
+        padding: 0 31px;
+    }
+
+    #nav li a {
+        /* padding: 31px; */
+        text-decoration: none;
+        font-size: 23px;
+        display: block;
+    }
+
+    #nav>li:hover>a {
+        color: aqua;
+        background-color: #fff;
+    }
+
+    #nav .subnav li:hover a {
+        color: aqua;
+    }
+
+    #nav .subnav1 li:hover a {
+        color: aqua;
+    }
+
+    #nav li:hover .subnav {
+        display: block;
+        width: 1200px;
+        height: 520px;
+    }
+
+    #nav li:hover .subnav1 {
+        display: block;
+        width: 315px;
+        height: 500px;
+    }
+
+    .left-subnav {
+        float: left;
+        width: 70%;
+        padding: 48px;
+    }
+
+    .right-subnav {
+        float: right;
+        width: 30%;
+        padding: 48px;
+    }
+
+    .right-subnav li {
+        padding-top: 18px;
+    }
+
+    .Started {
+        margin-top: 80px;
+        height: 60px;
+        width: 200px;
+    }
+
+    .Started a {
+        font-size: 20px;
+    }
+
+    .contain {
+        width: 100%;
+        height: 100%;
+    }
+
+    .container-fluid {
+        padding: 0;
+        margin: 0;
+    }
+
+    .para {
+        text-align: center;
+        background-color: rgb(24, 22, 22);
+        color: #fff;
+    }
+
+    .para h1 {
+        font-size: 71px;
+    }
+
+    .para p {
+        font-size: 22px;
+    }
+
+    .talk {
+        border: 1px solid #fff;
+        border-radius: 100px;
+        background-color: #fff;
+        color: #000;
+        width: 210px;
+        height: 60px;
+        line-height: 60px;
+
+    }
+
+    .talk1 {
+        margin-left: 900px;
+        margin-top: 20px;
+    }
+
+    .talk:hover {
+        background-color: #000;
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 100px;
+    }
+
+    .pic1 {
+        width: 100%;
+    }
+
+    .right {
+        width: 49%;
+        float: right;
+    }
+
+    .right img {
+        height: 1400px;
+        width: 990px;
+    }
+
+    .left {
+        width: 49%;
+        float: left;
+    }
+
+    .content1 {
+        height: 1400px;
+        background-color: #fff;
+        color: #000;
+    }
+
+    .para2 {
+        margin: 200px 0 200px 200px;
+        width: 620px;
+        height: 120px;
+    }
+
+    .para2 h1 {
+        font-size: 55px;
+
+    }
+
+    .para2 p {
+        font-size: 25px;
+    }
+
+    .content2 {
+        height: 650px;
+        width: 100%;
+        padding: 160px 500px;
+        background-color: rgb(193, 155, 248);
+        color: #000;
+    }
+
+    .para3 {
+        width: 1000px;
+        height: 360px;
+        font-size: 55px;
+    }
+
+    .para4 {
+        width: 1000px;
+        height: 360px;
+        border-top: 1px solid #000;
+    }
+
+    .para4 p {
+        font-size: 18px;
+        padding-top: 20px;
+    }
+
+    .content3 {
+        width: 100%;
+        height: 1155px;
+    }
+
+    .content3 .col-sm-6 img {
+        width: 102%;
+    }
+
+    .para5 {
+        padding: 275px 140px;
+        height: 1165px;
+    }
+
+    .para5 h1 {
+        font-size: 48px;
+    }
+
+    .para5 ul li {
+        font-size: 20px;
+        padding-bottom: 20px;
+    }
+
+    .para6 {
+        padding: 200px 150px;
+    }
+
+    .para6 h1 {
+        font-size: 56px;
+    }
+
+    .para6 p {
+        font-size: 30px;
+    }
+
+    .content4 {
+        margin-top: 1300px;
+        background-color: #000;
+        color: #fff;
+        height: 1200px;
+    }
+
+    .para7 {
+        padding: 200px 150px;
+    }
+
+    .para7 h1 {
+        font-size: 56px;
+    }
+
+    .para7 p {
+        font-size: 30px;
+    }
+
+    .para8 {
+        font-size: 120px;
+        border-left: 1px solid #fff;
+    }
+
+    .para8:hover {
+        color: rgb(193, 155, 248);
+    }
+
+    .para9 {
+        text-align: center;
+        padding-bottom: 100px;
+        padding-top: 100px;
+    }
+
+    .row1 {
+        border: 1px solid #000;
+        width: 500px;
+        height: 600px;
+        padding-top: 250px;
+        padding-left: 100px;
+        background-color: rgb(244, 244, 244);
+    }
+
+    .row1 h2 {
+        font-size: 48px;
+    }
+
+    .row1 p {
+        font-size: 25px;
+    }
+
+    .content6 {
+        padding-top: 200px;
+        padding-left: 200px;
+        height: 1500px;
+    }
+
+    .para10 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+    }
+
+    .para10 p {
+        font-size: 50px;
+    }
+
+    .content7 {
+        height: 600px;
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        padding-top: 200px;
+
+    }
+
+    .content7 p {
+        font-size: 64px;
+    }
+
+    .book {
+        border: 1px solid #fff;
+        border-radius: 100px;
+        width: 170px;
+
+    }
+
+    .book:hover {
+        border: 1px solid #fff;
+        border-radius: 100px;
+        width: 170px;
+        background-color: rgb(244, 244, 244);
+    }
+
+    .content7 h4 {
+        margin-left: 1440px;
+        padding: 10px;
+    }
+
+    .End {
+        width: 100%;
+        margin-top: 100px;
+        padding: 100px 250px;
+        color: #000;
+    }
+
+    .End li {
+        list-style: none;
+    }
+
+    .End li a {
+        color: #000;
+    }
+
+    .End .col-sm-2 li {
+        font-size: 20px;
+    }
+
+    #header {
+        position: fixed;
+        background-color: #fff;
+        height: 60px;
+        margin-top: 0;
+        padding-top: 0;
+        width: 100%;
+    }
+
+    .bgr {
+        background-color: #fff;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div id="menu">
+            <div id="header">
+                <ul id="nav">
+                    <li><a href=""><img src="./img/Wix-Logo-2015-present.jpg" alt="" class="pic"></a>
+                    </li>
+                    <li><a href="">Creation <i class="ti-angle-down" style="font-size: 14px;"></i></a>
+                        <ul class="subnav">
+                            <div class="left-subnav">
+                                <div class="left">
+                                    <li><a href="#"><span>Website Design</span> </a><br>Discover all the ways you can
+                                        create and design
+                                        your
+                                        website on
+                                        Wix.
+                                    </li>
+                                    <li><a href="#">Website Templates</a><br>Explore 800+ designer-made templates &
+                                        start with the right
+                                        one
+                                        for you.</li>
+                                    <li><a href="#">Advanced Web Development</a><br>Build web applications on Velo's
+                                        open dev platform.
+                                    </li>
+                                    <li><a href="#">Editor X</a><br>Take full design control with flexible grids and
+                                        custom breakpoints.
+                                    </li>
+                                </div>
+                                <div class="right">
+                                    <li><a href="#">Mobile App</a><br>Build, customize and manage your website on the
+                                        go.</li>
+                                    <li><a href="#">Hire a Professional</a><br>Find a professional to help build, design
+                                        and promote your
+                                        site.</li>
+                                    <li>
+                                </div>
+                            </div>
+                            <div class="right-subnav">
+                                <h3>Website Essentials</h3>
+                                <li><a href="#">Custom Domain Name</a></li>
+                                <li><a href="#">Secure Web Hosting</a></li>
+                                <li><a href="#">Logo Maker</a></li>
+                                <li><a href="#">SEO Toolset</a></li>
+                                <li><a href="#" style="padding-top: 50px;">Become a Wix Partner <br>
+                                        Gain Partner benefits & scale your business. <br> <i class="ti-arrow-right"
+                                            style="float:right ;"></i></a>
+                                </li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li><a href="#">Business <i class="ti-angle-down" style="font-size: 14px;"></i></a>
+                        <ul class="subnav">
+                            <div class="left-subnav">
+                                <div class="left">
+                                    <li><a href="#">Online Store</a><br>Sell products and manage fulfillment from one
+                                        eCommerce
+                                    </li>
+                                    <li><a href="#">Online Services</a><br>Offer clients to book your services and pay
+                                        online.</li>
+                                    <li><a href="#">Restaurants</a><br>Display your menu and take orders & reservations
+                                        online.</li>
+                                    <li><a href="#">Blog Website</a><br>Share ideas with your audience and drive traffic
+                                        to your
+                                        website.</li>
+                                </div>
+                                <div class="right">
+                                    <li><a href="#">Fitness</a><br>Offer classes and manage your clients, bookings and
+                                        payments online.
+                                    </li>
+                                </div>
+                            </div>
+                            <div class="right-subnav">
+                            </div>
+                        </ul>
+                    </li>
+                    <li><a href="#">Growth <i class="ti-angle-down" style="font-size: 14px;"></i></a>
+                        <ul class="subnav1">
+                            <li><a href="#">Email Marketing</a><br>Get the word out about sales and track your
+                                campaigns.</li>
+                            <li><a href="#">Social Posts</a><br>Reach a wider audience with eye-catching posts.</li>
+                            <li><a href="#">Facebook Ads</a><br>Target the right customers with Wix's AI optimization.
+                            </li>
+                            <li><a href="#">Client Management</a><br>Collect leads, talk to clients and streamline your
+                                workflow.</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Resources <i class="ti-angle-down" style="font-size: 14px;"></i></a>
+                        <ul class="subnav1">
+                            <li><a href="#">All Tools & Features</a><br>Find everything you need to build your site and
+                                run your
+                                business.</li>
+                            <li><a href="#">Web Design Inspiration</a><br>Get inspired by unique designs & powerful
+                                websites built on
+                                Wix.</li>
+                            <li><a href="#">Wix Learn</a><br>Take video courses & lessons and gain the skills you need
+                                to succeed
+                                online.</li>
+                            <li><a href="#">Wix Blog</a><br>Get business tips, online marketing guidance, and the latest
+                                website
+                                trends.
+                            </li>
+                        </ul>
+                    </li>
+                    <li style="color: black; 
+           font-size: 24px;">|</li>
+                    <li><a href="#">Enterprise</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="">Support</a></li>
+                    <li><a href="#"><i class="ti-world" style="font-size: 23px;padding-left: 500px;"></i></a></li>
+                    <li><a href="http://127.0.0.1:5500/Sign.html"
+                            style="    border: 1px solid #166aea; border-radius: 100px; color:#166aea;">Sign In</a>
+                </ul>
+            </div>
+        </div>
+        <div class="contain">
+            <div class="container-fluid para">
+                <h1>Wix Enterprise</h1>
+                <p>Create best-in-class websites backed by leading <br> performance and enterprise-grade security.</p>
+                <p class="talk talk1">Let's talk</p>
+                <img src="https://static.wixstatic.com/media/fee50a_cd24c7e63f324dc9a93bc4d50ca6d82e~mv2.jpg/v1/fill/w_1899,h_1350,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/fee50a_cd24c7e63f324dc9a93bc4d50ca6d82e~mv2.jpg"
+                    alt="">
+            </div>
+            <div class="container-fluid">
+                <img src="./img/z3681177064220_f4e34302f518a0b89675d5fa8f49f9bb.jpg" alt="" class="pic1">
+            </div>
+            <div class="container-fluid content1">
+                <div class="left">
+                    <div class="para2">
+                        <h1>Showcase your brand <br> with limitless design <br> capabilities</h1>
+                        <p>Let design teams explore their creative limits and build exceptional websites for your brand
+                            without taking up dev time and resources.</p>
+                        <p style="text-decoration: underline;">Book a Demo <i class="ti-arrow-right"></i> </p>
+                    </div>
+                    <div class="para2" style="padding-top: 500px;">
+                        <h1>
+                            Full control from <br> ideation to optimization</h1>
+                        <p>Create a custom experience based on your business needs. Integrate with external databases,
+                            and seamlessly A/B test, measure and iterate to drive the best conversion.</p>
+                        <p style="text-decoration: underline;">Book a Demo <i class="ti-arrow-right"></i></p>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="./img/67dda900e08125df7c90.jpg" alt="">
+                </div>
+            </div>
+            <div class="container-fluid content2 ">
+                <h1 class="para3">
+                    “Compared to other platforms, Wix gives us complete flexibility in design and more time to focus on
+                    user experience and creative features.”
+                </h1>
+                <div class="para4">
+                    <p style="float:left ;">
+                        Céline Toma | Gallant Avenue
+                    </p>
+                    <p style="float: right;">
+                        CEO and Web Designer
+                    </p>
+                </div>
+            </div>
+            <div class="row content3">
+                <div class="col-sm-6">
+                    <img src="https://static.wixstatic.com/media/0784b1_7fb4b6cf2c9045ad98390eff28a2e3a7~mv2.jpg/v1/fill/w_950,h_1155,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/0784b1_7fb4b6cf2c9045ad98390eff28a2e3a7~mv2.jpg"
+                        alt="">
+                </div>
+                <div class="col-sm-6 para5">
+                    <h1> A comprehensive security framework</h1>
+                    <ul>
+                        Our enterprise-grade security keeps your business safe at all times.
+                        <li>SSO allows employees to work securely and efficiently</li>
+                        <li>All sites are served over HTTPS using TLS v1.3</li>
+                        <li>Advanced anti DDoS solutions mitigate against attacks</li>
+                        <li>Compliant and certified with the highest international security standards including SOC 2
+                            Type 2</li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 para6">
+                        <h1>Industry-leading <br> performance</h1>
+                        <p>
+                            Wix's performance-first culture and powerful <br> infrastructure enables faster loading
+                            times <br> and the highest level of user experience.
+                        </p> <br><br>
+                        <h1>
+                            “Wix always makes performance their priority and it definitely shows, both in monitoring
+                            tools and in their user's experience.”
+                        </h1> <br><br>
+                        <p>
+                            Yoav Weiss | Google <br>
+                            Senior Software Engineer & Developer Advocate
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="https://static.wixstatic.com/media/0784b1_8fa2547d2215422796966e118e25e5aef000.jpg/v1/fill/w_760,h_924,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/0784b1_8fa2547d2215422796966e118e25e5aef000.jpg"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="content4">
+                <div class="para7">
+                    <h1>
+                        Scale with confidence
+                    </h1>
+                    <p>
+                        Engineered for high resilience and limitless scalability, <br> your site will always run
+                        smoothly,
+                        even during traffic and transaction spikes.
+                    </p>
+                </div>
+                <div class="row" style="padding-left: 150px;">
+                    <div class="col-sm-6">
+                        <p class="para8">99.99%</p>
+                        <p> <span>Uptime SLA</span>, enabling unlimited traffic scaling.</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="para8">220 +</p>
+                        <p>CDN nodes deployed globally.</p>
+                    </div>
+                </div>
+                <div class="row" style="padding-left: 150px;">
+                    <div class="col-sm-6">
+                        <p class="para8">220M</p>
+                        <p>Users worldwide trust Wix to host their websites.</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="para8">120B</p>
+                        <p>Site views a month hosted by Wix, on average.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid content5">
+                <h1 class="para9">
+                    Exclusive benefits tailored <br> to your business needs
+                </h1>
+                <div class="row ">
+                    <div class="col-sm-4 row1">
+                        <h2>
+                            Account <br> manager</h2>
+                        <p>Your dedicated account manager will be on hand to discuss and advise on the best solutions to
+                            help you reach your goals.</p>
+                    </div>
+                    <div class="col-sm-4 row1 ">
+                        <h2>24/7 Priority <br> Support</h2>
+                        <p>Get superior support tailored to your teams’ specific needs from our global customer care
+                            team at any time.</p>
+                    </div>
+                    <div class="col-sm-4 row1">
+                        <h2>Site migration <br> support</h2>
+                        <p>Migrate your websites and projects from other platforms with the support of our team of
+                            Enterprise experts.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 row1">
+                        <h2>Enterprise <br> dashboard</h2>
+                        <p>Maximize productivity by managing teams, workflows and multiple sites from one place. Set up
+                            your SSO and add licenses all from your Enterprise dashboard.</p>
+                    </div>
+                    <div class="col-sm-4 row1">
+                        <h2>Tailored <br> solutions</h2>
+                        <p>We can create tailored solutions to suit your business, from custom templates to funnels,
+                            system integrations to applications. Anything is possible.</p>
+                    </div>
+                    <div class="col-sm-4 row1">
+                        <h2>Expert <br> consultation</h2>
+                        <p>Our in-house specialists provide in-depth information on products or solutions, and answer
+                            questions relating to design, SEO, security, performance and more.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container content6">
+                <div>
+                    <h1 style="padding-bottom: 100px; font-size: 60px;">What Enterprises need to know</h1>
+                </div>
+                <div class="para10">
+                    <p>
+                        How much does Wix Enterprise cost?
+                    </p>
+                </div>
+                <div class="para10">
+                    <p>
+                        What are the main features of Wix Enterprise?
+                    </p>
+                </div>
+                <div class="para10">
+                    <p>
+                        What level of support does Wix Enterprise provide?
+                    </p>
+                </div>
+                <div class="para10">
+                    <p>
+                        How many languages does Wix Enterprise support?
+                    </p>
+                </div>
+            </div>
+            <div class="container-fluid content7">
+                <p>Want to learn more?</p>
+                <p>Set up a call with our Enterprise Team</p>
+                <h4 class="book">Book a call</h4>
+            </div>
+            <div class="row End">
+                <div class="col-sm-2">
+                    <ul>
+                        <li>
+                            PRODUCT
+                            <ul>
+                                <li><a href="#">Templates</a></li>
+                                <li><a href="">Explore</a></li>
+                                <li><a href="">Features</a></li>
+                                <li><a href="">Website Builder</a></li>
+                                <li><a href="">Web Accessibility</a></li>
+                                <li><a href="">Velo</a></li>
+                                <li><a href="">Wix Playground</a></li>
+                                <li><a href="">My Sites</a></li>
+                                <li><a href="">Premium Plans</a></li>
+                                <li><a href="">Wix SEO</a></li>
+                                <li><a href="">Logo Maker</a></li>
+                                <li><a href="">Create a Blog</a></li>
+                                <li><a href="">Online Store</a></li>
+                                <li><a href="">Wix Bookings</a></li>
+                                <li><a href="">Restaurants</a></li>
+                                <li><a href="">App Market</a></li>
+                                <li><a href="">Domains</a></li>
+                                <li><a href="">Business Email</a></li>
+                                <li><a href="">Web Hosting</a></li>
+                                <li><a href="">Developers</a></li>
+                                <li><a href="">Enterprise</a></li>
+                                <li><a href="">Email Marketing</a></li>
+                                <li><a href="">Website Design</a></li>
+                                <li><a href="">Professional Tools</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <ul>
+                        <li>
+                            COMPANY
+                            <ul>
+                                <li><a href="">About Wix</a></li>
+                                <li><a href="">Press Room</a></li>
+                                <li><a href="">Investor Relations</a></li>
+                                <li><a href="">Wix Jobs</a></li>
+                                <li><a href="">Design Assets</a></li>
+                                <li><a href="">Terms of Use</a></li>
+                                <li><a href="">App Market Terms</a></li>
+                                <li><a href="">Privacy Policy</a></li>
+                                <li><a href="">Privacy and Security Hub</a></li>
+                                <li><a href="">Accessibility Statement</a></li>
+                                <li><a href="">Abuse</a></li>
+                                <li><a href="">Affiliates</a></li>
+                                <li><a href="">Wix Capital</a></li>
+                                <li><a href="">Updates & Releases</a></li>
+                                <li><a href="">Contact Us</a></li>
+                                <li><a href="">Patent Notice</a></li>
+                                <li><a href="">Sitemap</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <ul>
+                        <li>
+                            COMMUNITY
+                            <ul>
+                                <li><a href="">Wix Blog</a></li>
+                                <li><a href="">Wix Marketplace</a></li>
+                                <li><a href="">Student Website</a></li>
+                                <li><a href="">Wix Encyclopedia</a></li>
+                                <li><a href="">Partner Community</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <ul>
+                        <li>SUPPORT
+                            <ul>
+                                <li><a href="">Support Center</a></li>
+                                <li><a href="">Wix Learn</a></li>
+                                <li><a href="">Status Page</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <ul>
+                        <li>Wix</li>
+                        <ul>
+                            <li>
+                                <p>The Wix website builder offers a complete solution from enterprise-grade
+                                    infrastructure and business features to advanced SEO and marketing tools–enabling
+                                    anyone to create and grow online.
+                                    <br>
+                                    © 2006-2022 Wix.com, Inc
+                                </p>
+                            </li>
+                            <li><i class="ti-facebook"></i><i class="ti-twitter"></i><i class="ti-youtube"></i><i
+                                    class="ti-pinterest"></i><i class="ti-instagram"></i><i></i></li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
